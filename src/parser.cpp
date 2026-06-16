@@ -1,7 +1,9 @@
 #include <sstream>
 #include <vector>
 #include <string>
-std::vector<std::string> parse(std::string cmd){
+#include "../include/parser.hpp"
+
+std::vector<std::string> parse(const std::string& cmd){
     std::stringstream ss(cmd);
     std::string token;
     std::vector<std::string> cmd_array;
@@ -9,4 +11,5 @@ std::vector<std::string> parse(std::string cmd){
         cmd_array.push_back(token);
     }
     return cmd_array;
+
 }

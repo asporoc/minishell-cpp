@@ -1,0 +1,9 @@
+# binaries
+app
+a.out
+
+# object files
+*.o
+
+# debug files
+*.dSYM
