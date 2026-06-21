@@ -7,7 +7,10 @@ int main(){
     while(true){
         std::string cmd;
         std::cout << "minishell-cpp >> ";
-        std::getline(std::cin, cmd);
+        if(!std::getline(std::cin, cmd)){
+            std::cout << "exit \n";
+            break;
+        };
         auto result = parse(cmd);
         execute(result);
     }
